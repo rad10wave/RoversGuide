@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity"
+    android:background="#353535">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="408dp"
+        android:layout_height="264dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liteMode="true"
+
+        />
+
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map"
+        android:background="#353535"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stateContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:scrollbars="vertical"
+                android:textColor="#fff"
+                android:text="Well, here will be all the details about your clicked state.\nEnjoy!"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/stateHead1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:scrollbars="vertical"
+                android:text="HEAD"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:id="@+id/cityContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:scrollbars="vertical"
+                android:textColor="#fff"
+                android:text="Well, here will be all the details about your clicked state.\nEnjoy!"
+                android:textSize="18sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn1"
+                android:layout_width="75dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="280dp"
+                android:background="@drawable/uber"
+
+                android:backgroundTint="@color/cardview_light_background"
+                android:onClick="openapp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
